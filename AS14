@@ -1,0 +1,15 @@
+count1 = 0
+count2 = 0
+s = str(input("Please enter the string here"))
+for i in range (0,len(s),1):
+    char = s[i]
+    if char == '(':
+        count1 += 1
+    elif char == ')':
+        count2 += 1
+if count1 == count2:
+    print("all brackets are equal")
+elif count1 > count2:
+    print('Too many opening brackets')
+else:
+    print("Too many closed brackets")
