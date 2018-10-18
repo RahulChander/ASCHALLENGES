@@ -1,0 +1,111 @@
+# 1
+print(list(range(10, 0, -2)))
+# Rule: If step is negative, start must be greater than stop
+
+
+
+# 2
+#Two turtle instances, first tess, and then a copy of tess
+#tess's  colour isn't changed because its a different turtle not linked to alex
+
+
+
+# 3
+a = [1, 2, 3]
+b = a[:]
+#now b is just a copy of a
+b[0] = 5
+# replace 1 with 5, not changed a
+
+
+
+# 4
+# First will be false, probably because while they have the same elements, they were written differently
+# Second will be true, because now they have been directly connected
+
+
+
+# 5
+def add_vectors(x,y):
+    List3 = []
+    if len(x) == len(y):
+        for i in range(0,len(x)):
+            w = x[i] + y[i]
+            List3.append(w)
+    print(List3)
+add_vectors([1, 1], [1, 1])
+
+
+
+# 6
+def scalar_mult(x,y):
+    List2 = []
+    for i in y:
+        w = i * x
+        List2.append(w)
+    print(List2)
+scalar_mult(7, [3, 0, 5, 11, 2])
+
+
+
+# 7
+def dot_product(x,y):
+    total = 0
+    if len(x) == len(y):
+        for i in range(0,len(x)):
+            w = x[i] * y[i]
+            total+= w
+    print(total)
+dot_product([1, 2, 1], [1, 4, 3])
+
+
+
+# 8
+def cross_product(x,y):
+    total = 0
+    if len(x) == len(y):
+        for i in range(0,len(x)):
+            w = x[i] * y[len(x)-i-1]
+            total+= w
+    print(total)
+cross_product([1, 1, 5], [5, 1, 1])
+
+
+
+# 9
+# WTF is this
+
+
+
+# 10
+def replace(s,o,n):
+    string = ''
+    w = len(o)
+    for i in range(0,len(s)):
+        a = s[i:i+w]
+        if a == o:
+            string += n
+        else:
+            string += a
+    string2 = ''
+    for i in range(0,len(string),2):
+        w = string[i]
+        string2 += w
+    print(string2)
+s = "I love spom! Spom is my favorite food. Spom, spom, yum!"
+replace(s, "om", "am")
+
+
+
+# 11
+# The code doesn't work because the values of a and b are not changed outside the function
+# Fixed code entered below
+def swap(x, y):
+     print("before swap statement: x:", x, "y:", y)
+     (x, y) = (y, x)
+     return (x,y)
+a = ["This", "is", "fun"]
+b = [2,3,4]
+(a,b) = swap(a,b)
+print(a)
+print(b)
