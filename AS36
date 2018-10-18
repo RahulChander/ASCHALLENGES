@@ -1,0 +1,9 @@
+def getfirstlast(x):
+    w = len(x)
+    List2 = []
+    List2.append(x[0])
+    List2.append(x[w-1])
+    return (List2)
+
+
+print (getfirstlast([5, 10, 15, 20, 25]))
