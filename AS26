@@ -1,0 +1,19 @@
+par = 'When can the relationship conceal the amplifier? The exam boils opposite the grain! The connector purges on top of the cloud. The herd dashes opposite every ice! A technical age enforces the restored connector. The addicted tongue balances the tops sea.'
+par = par.lower()
+count = 0
+count2 = 0
+List = []
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+for i in par:
+    if i in alphabet:
+        count += 1
+    elif i == ' ':
+        List.append(count)
+        count = 0
+
+List.append(count)
+
+w = sum(List)
+x = len(List)
+print (int((w/x)))
+
