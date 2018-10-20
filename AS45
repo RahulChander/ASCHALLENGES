@@ -1,0 +1,15 @@
+a = int(input("Please enter no of images"))
+print("Max resolution: 2400 x 1600")
+print("Min resolution: 300 x 150")
+
+b = (a * 2400 * 1600)
+c = (a * 300 * 150)
+d = (b+c)/2
+d /= (1024*1024)
+d = d * 100
+d = int(d)
+d = d / 100
+
+print(str(d) + ' MB')
+
+
