@@ -1,0 +1,6 @@
+List = [4,9,7]
+for i in List:
+    string =''
+    for j in range(i):
+        string += '*'
+    print(string)
