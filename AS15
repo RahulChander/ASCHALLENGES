@@ -1,0 +1,36 @@
+# 1
+def sum(List):
+    total = 0
+    for i in List:
+        total += i
+    return (total)
+
+
+
+# 2
+def add(x):
+    a = sum([1,2,3,4,5])
+    b = 4
+    return (a+b)
+
+
+
+# 3
+def sum2(x):
+    count = x
+    if x < 0:
+        return(count)
+    else:
+        return sum2(x-1)
+
+
+
+# 4
+
+w ='global '
+def foo():
+    global w
+    w = w * 2
+    print(w)
+
+
