@@ -1,0 +1,126 @@
+text = 'ckgahvdacugvcakuvhukbgdakxvghfcjygwhgdygfcgwiygcgsuficlgks'
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+f = 0
+g = 0
+h = 0
+i = 0
+j = 0
+k = 0
+l = 0
+m = 0
+n = 0
+o = 0
+p = 0
+q = 0
+r = 0
+s = 0
+t = 0
+u = 0
+v = 0
+w = 0
+x = 0
+y = 0
+z = 0
+for bob in text:
+    if bob == 'a':
+        a += 1
+    if bob == 'b':
+        b += 1
+    if bob == 'c':
+        c += 1
+    if bob == 'd':
+        d += 1
+    if bob == 'e':
+        e += 1
+    if bob == 'f':
+        f += 1
+    if bob == 'g':
+        g += 1
+    if bob == 'h':
+        h += 1
+    if bob == 'i':
+        i += 1
+    if bob == 'j':
+        j += 1
+    if bob == 'k':
+        k += 1
+    if bob == 'l':
+        l += 1
+    if bob == 'm':
+        m += 1
+    if bob == 'n':
+        n += 1
+    if bob == 'o':
+        o += 1
+    if bob == 'p':
+        p += 1
+    if bob == 'q':
+        q += 1
+    if bob == 'r':
+        r += 1
+    if bob == 's':
+        s += 1
+    if bob == 't':
+        t += 1
+    if bob == 'u':
+        u += 1
+    if bob == 'v':
+        v += 1
+    if bob == 'w':
+        w += 1
+    if bob == 'x':
+        x += 1
+    if bob == 'y':
+        y += 1
+    if bob == 'z':
+        z += 1
+
+high1 = 0
+h1 = ''
+high2 = 0
+h2 = ''
+high3 = 0
+h3 = ''
+low1 = 1000
+l1 = ''
+low2 = 1000
+l2 = ''
+low3 = 1000
+l3 = ''
+
+List = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]
+lower = ['a','b''c','d','e','f','g','h','i','j','k','l',',m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+for i in range(26):
+    current = List[i]
+    if current > high1:
+        high1 = current
+        h1 = lower[i]
+
+    elif current > high2:
+        high2 = current
+        h2 = lower[i]
+    elif current > high3:
+        high3 = current
+        h3 = lower[i]
+
+    if current < low1:
+        low1 = current
+        l1 = lower[i]
+    elif current < low2:
+        low2 = current
+        l2 = lower[i]
+    elif current < low3:
+        low3 = current
+        l2 = lower[i]
+
+
+print("High: " + h1)
+print("High: " + h2)
+print("High: " + h3)
+print("Low: " + l1)
+print("Low: " + l2)
+print("Low: " + l3)
