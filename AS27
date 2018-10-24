@@ -1,0 +1,63 @@
+
+WORDLIST_FILENAME = "/Users/rahulchander/Desktop/words.txt"
+
+def loadWords():
+    """
+    Returns a list of valid words. Words are strings of lowercase letters.
+
+    Depending on the size of the word list, this function may
+    take a while to finish.
+    """
+    print("Loading word list from file...")
+    # inFile: file
+    inFile = open(WORDLIST_FILENAME, 'r')
+    # line: string
+    line = inFile.readline()
+    # wordlist: list of strings
+    wordlist = line.split()
+    print("  ", len(wordlist), "words loaded.")
+    return wordlist
+
+
+w = loadWords()
+
+
+count = 0
+start = 0
+game = 0
+lastletter = '<blank>'
+
+
+while game == 0:
+    print(" ")
+    if count == 0:
+        print("Player 1")
+        count = 1
+    elif count == 1:
+        print("Player 2")
+        count = 0
+    print("Last Letter: " + lastletter)
+    p1 = input("Please enter word")
+    p1 = p1.lower()
+    if start == 0:
+        start = 1
+        if p1 in w:
+            print("Valid")
+            a = len(p1)
+            lastletter = p1[a-1:a]
+        else:
+            game = 1
+    else:
+        if p1 in w and p1[0:1] == lastletter:
+            print("Valid")
+            a = len(p1)
+            lastletter = p1[a-1:a]
+        else:
+            game = 1
+
+
+if count == 0:
+    print("Player 1 wins")
+else:
+    print("Player 2 wins")
+
