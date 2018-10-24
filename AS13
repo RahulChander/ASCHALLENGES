@@ -1,0 +1,16 @@
+#GPM and NPM
+sales = int(input("Please enter numerical value of sales"))
+curr = input("Please enter USD if USD, MYR if MYR")
+
+gross = int(input("Please enter gross profit in " + curr))
+net = int(input("Please enter net profit in " + curr))
+
+a = (gross/sales)*10000
+a = int(a)
+a = a / 100
+print("Gross profit margin (%): " + str(a) + " in " + curr)
+
+a = (net/sales)*10000
+a = int(a)
+a = a / 100
+print("Net profit margin (%): " + str(a) + " in " + curr)
