@@ -1,0 +1,88 @@
+# 1 (First part is just creating a new file)
+myfile = open("test.txt", "w")
+myfile.write("My first snake written from Python\n")
+myfile.write("---------------------------------\n")
+myfile.write("Hello, snake!\n")
+myfile.close()
+List = []
+mynewhandle = open("test.txt", "r")
+while True:                            # Keep reading forever
+    theline = mynewhandle.readline()   # Try to read next line
+    if len(theline) == 0:              # If there are no more lines
+        break                          #     leave the loop
+    List.append(theline)
+mynewhandle.close()
+print(List)
+myfile = open("test.txt", "w")
+x = len(List)
+for j in range(x-1,-1,-1):
+    myfile.write(List[j])
+myfile.close()
+
+
+
+# 2
+for k in List:
+    i = k.lower()
+    for l in range(0,len(i)-5):
+        y = i[l:l+5]
+        if y == 'snake':
+            print(k)
+            break
+
+
+
+
+# 3
+myfile = open("test.txt", "w")
+myfile.write("My first snake written from Python\n")
+myfile.write("---------------------------------\n")
+myfile.write("Hello, snake!\n")
+myfile.close()
+List = []
+mynewhandle = open("test.txt", "r")
+while True:                            # Keep reading forever
+    theline = mynewhandle.readline()   # Try to read next line
+    if len(theline) == 0:              # If there are no more lines
+        break                          #     leave the loop
+    List.append(theline)
+mynewhandle.close()
+List2 = []
+for i in range(len(List)):
+    number = str(i)
+    while len(number) < 4:
+        number = '0' + number
+    number += ' '
+    d = List[i]
+    d = number + d
+    List2.append(d)
+myfile = open("test.txt", "w")
+x = len(List2)
+for j in range(0,x,1):
+    myfile.write(List2[j])
+myfile.close()
+
+
+
+# 4
+List = []
+mynewhandle = open("test.txt", "r")
+while True:                            # Keep reading forever
+    theline = mynewhandle.readline()   # Try to read next line
+    if len(theline) == 0:              # If there are no more lines
+        break                          #     leave the loop
+    List.append(theline)
+mynewhandle.close()
+List2 = []
+for i in range(len(List)):
+    d = List[i]
+    w = len(d)
+    f = d[5:w]
+    List2.append(f)
+myfile = open("test.txt", "w")
+x = len(List2)
+for j in range(0,x,1):
+    myfile.write(List2[j])
+myfile.close()
+
+
