@@ -1,1 +1,10 @@
+import mymodule1
+import mymodule2
+
+print ( (mymodule1.age() - mymodule2.age()) == (mymodule1.year()- mymodule2.year()))
+
+def name(___name___):
+    print("My name is", ___name___)
+
+mymodule1.name('Rahul')
 
