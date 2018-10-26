@@ -1,1 +1,10 @@
+def age():
+    return(16)
+
+def year():
+    return(2018)
+
+def name(___name___):
+    if ___name___ == "___main___":
+        print("This won't run")
 
