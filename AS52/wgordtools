@@ -1,0 +1,61 @@
+def clean(x):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    x2 = ''
+    for i in x:
+        check = 0
+        for j in alphabet:
+            if i == j:
+                check = 1
+        if check == 1:
+            x2 += i
+    return(x2)
+
+def hasdashdash(x):
+    global check
+    for i in range(0,len(x)-1):
+
+        w = x[i:i+2]
+        if w == '--':
+            check = 1
+            return True
+
+
+def extractwords(x):
+    string = ''
+    List = []
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    x = x.lower()
+    for i in x:
+        if i in alphabet:
+            string += i
+        else:
+            List.append(string)
+            string = ''
+
+    for i in List:
+        if i == '':
+            List.remove(i)
+    return List
+
+def wordcount(word,List):
+    count = 0
+    for i in List:
+        if i == word:
+            count += 1
+    return count
+
+def wordset(List):
+    List2 = []
+    for i in List:
+        if i not in List2:
+            List2.append(i)
+    List3 = sorted(List2)
+    print(List3)
+
+def longestword(list):
+    length = 0
+    for i in list:
+        l = len(i)
+        if l > length:
+            length = l
+    return length
