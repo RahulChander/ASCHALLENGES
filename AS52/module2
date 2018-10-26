@@ -1,1 +1,9 @@
+def age():
+    return(0)
+
+def year():
+    return(2002)
+
+def name(___name___):
+    print("My name is", ___name___)
 
