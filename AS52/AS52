@@ -1,0 +1,36 @@
+# 1
+import calendar
+cal = calendar.TextCalendar(3)      # Create an instance
+cal.pryear(2018)                   # What happens here?
+cal.prmonth(2018,10)
+#d = calendar.LocaleTextCalendar(0, "FRENCH")
+#d.pryear(2012)
+# Code doesn't work with this version of python
+print (calendar.isleap(2020))
+
+
+
+# 2
+import math
+# 49 simple math functions
+print (math.ceil(1.2))
+#Rounds Up
+print (math.floor(1.2))
+#Rounds Down
+#We just try different numbers, square them, and then adjust our value based on result
+# Pi, e, tau, inf (There are 4)
+
+
+
+# 3
+import copy
+#copy.deepcopy(): This makes a new compound object, enters copies of the objects in the original
+#Useful for exercises: 5,6,7,8,10,11
+
+# 4
+#On other sheet
+
+# 5
+#only in the first one
+
+
