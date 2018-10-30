@@ -1,0 +1,75 @@
+import random
+a = input("Please enter E for even parity and O for odd parity")
+LIST = []
+
+for i in range(7):
+    byte = ''
+    for K in range(7):
+        w = random.randint(0,1)
+        w = str(w)
+        byte += w
+
+
+
+    count = 0
+    check = 0
+    for i in byte:
+        if i == '1':
+            count += 1
+
+        if (i != '1' and i != '0' ) or len(byte) != 7:
+            print("invalid byte")
+            check = 1
+            break
+
+    if check == 0:
+        string = ''
+        if a == 'E' and count % 2 == 0:
+            string += '0'
+            string += byte
+
+        elif a == 'E' and count % 2 == 1:
+            string += '1'
+            string += byte
+
+        elif a == 'O' and count % 2 == 0:
+            string += '1'
+            string += byte
+
+        elif a == 'O' and count % 2 == 1:
+            string += '0'
+            string += byte
+
+        LIST.append(string)
+
+print(LIST)
+
+List2 = []
+for i in LIST:
+    List3 = []
+    for j in i:
+        List3.append(j)
+    List2.append(List3)
+
+for i in List2:
+    print(i)
+print('------------------------------------------')
+
+List = []
+for i in range(8):
+
+    count = 0
+    for j in List2:
+        w = j[i]
+        if w == '1':
+            count += 1
+    if count % 2 == 0 and a == 'E':
+        List.append("0")
+    elif count % 2 == 1 and a == 'E':
+        List.append("1")
+    elif count % 2 == 1 and a == 'O':
+        List.append("1")
+    elif count % 2 == 0 and a == 'O':
+        List.append("0")
+
+print(List)
