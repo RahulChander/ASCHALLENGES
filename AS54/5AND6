@@ -1,0 +1,73 @@
+# 6
+# Yeah no I'm not 7
+
+# 5
+import random
+my_tickets = [ [ 7, 17, 37, 19, 23, 43],
+               [ 7,  2, 13, 41, 31, 43],
+               [ 2,  5,  7, 11, 13, 17],
+               [13, 17, 37, 19, 23, 43] ]
+
+def lotto_draw():
+    List = []
+    for i in range(6):
+        List.append(random.randint(1,49))
+    return List
+
+
+def lotto_match(x,y):
+    count = 0
+    for i in x:
+        for j in y:
+            if i == j:
+                count += 1
+                break
+    return(count)
+
+
+def lotto_matches(x,y):
+    List = []
+    count = 0
+    for i in x:
+        List.append(lotto_match(i,y))
+    return List
+
+
+def primes_in(x):
+
+    primes = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47]
+    count = 0
+    for i in x:
+        if i in primes:
+            count += 1
+    return count
+
+List = []
+for i in my_tickets:
+    List += i
+
+def allprimes(l):
+    primes = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47]
+    for i in l:
+        if i in primes:
+            primes.remove(i)
+    return primes
+
+
+def until(x,q):
+
+    count = 0
+    check = 0
+    while check == 0:
+        w = lotto_draw()
+        count += 1
+        y = lotto_matches(x,w)
+        for i in y:
+                if i == q:
+                    check = 1
+    return(count)
+
+print(until(my_tickets,3))
+print(until(my_tickets,4))
+print(until(my_tickets,5))
+print(until(my_tickets,6))
