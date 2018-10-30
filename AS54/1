@@ -1,0 +1,58 @@
+# 1
+
+def merge1(xs, ys):
+    """ merge sorted lists xs and ys. Return a sorted result """
+    result = []
+    for i in xs:
+        for j in ys:
+            if i == j:
+                result.append(i)
+                break
+    return(result)
+
+def merge2(xs, ys):
+    """ merge sorted lists xs and ys. Return a sorted result """
+    result = []
+    for i in xs:
+        check = 0
+        for j in ys:
+            if i == j:
+                check = 1
+        if check == 0:
+            result.append(i)
+    return(result)
+
+def merge3(xs, ys):
+    """ merge sorted lists xs and ys. Return a sorted result """
+    result = []
+    for i in ys:
+        check = 0
+        for j in xs:
+            if i == j:
+                check = 1
+        if check == 0:
+            result.append(i)
+    return(result)
+
+def merge4(xs,ys):
+    w = merge3(xs,ys)
+    x = merge3(ys,xs)
+    List = []
+    List += w
+    List += x
+    return List
+
+def merge5(xs, ys):
+    """ merge sorted lists xs and ys. Return a sorted result """
+    result = []
+    List1 = xs.copy()
+    List2 = ys.copy()
+    for i in List1:
+        if i in List2:
+            xs.remove(i)
+            ys.remove(i)
+
+    Final = xs + ys
+    return Final
+
+
