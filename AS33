@@ -1,0 +1,16 @@
+def dec_to_bin(x):
+    return int(bin(x)[2:])
+import random
+
+a = random.randint(0,255)
+b = print(a)
+c = str(dec_to_bin(a))
+while len(c) < 8:
+    c = '0' + c
+print(c)
+
+
+input = input("Please enter your code")
+if input == c:
+    print ("Yeet")
+
