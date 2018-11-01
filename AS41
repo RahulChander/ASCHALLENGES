@@ -1,0 +1,22 @@
+a = input("Please enter E if even and O if odd")
+
+import random
+
+string = ''
+for i in range(7):
+    string += str(random.randint(0,1))
+print (string)
+
+count1s = 0
+for j in string:
+    if j == '1':
+        count1s += 1
+
+bit = input("Please enter 1 or 0, depending on your parity selection")
+count1s += int(bit)
+if a == 'E' and count1s % 2 == 0:
+    print("correct")
+elif a == 'O' and count1s % 2 == 1:
+    print("correct")
+else:
+    print("nope")
