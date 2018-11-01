@@ -1,0 +1,62 @@
+import turtle
+
+def draw_bar(t, height,height2,height3,height4):
+    """ Get turtle t to draw one bar, of height. """
+        # Added this line
+
+    t.write(0)
+    t.forward(height-15)
+    t.left(90)
+    t.write("  "+ str(height))
+    t.right(90)
+    t.forward(15)
+
+
+    t.right(90)
+    t.forward(20)
+    t.left(90)
+    t.forward(height2)
+    t.left(90)
+    t.forward(40)
+    t.left(90)
+    t.forward(height2)
+    t.left(90)
+    t.forward(20)
+    t.penup()
+    t.left(90)
+    t.forward(height2)
+    t.pendown()
+    t.write(height2)
+
+    t.right(90)
+    t.forward(20)
+    t.left(90)
+    t.forward(height3)
+    t.left(90)
+    t.forward(40)
+    t.left(90)
+    t.forward(height3)
+    t.left(90)
+    t.forward(20)
+    t.penup()
+    t.left(90)
+    t.forward(height3)
+    t.pendown()
+    t.forward(6)
+    t.write(height3)
+    t.forward(height4 - 6)
+    t.write(height4)
+
+
+
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()       # Create tess and set some attributes
+tess.color("blue","white")
+tess.pensize(3)
+
+
+draw_bar(tess, 70,80,90,100)
+# first is lower quartile, second is upper quartile, third is the maxi
+wn.mainloop()
