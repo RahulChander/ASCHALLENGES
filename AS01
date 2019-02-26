@@ -1,21 +1,17 @@
-InitialArray = [9,4,5,7,3,1,2,8,6]
-w = len(InitialArray)
-w = w - 1
-finish = 0
-counter = 0
-while finish == 0:
-    for i in range(0,w,1):
-        a = InitialArray[i]
-        b = InitialArray[i+1]
-        if a > b:
-            InitialArray[i],InitialArray[i+1] = InitialArray[i+1],InitialArray[i]
-    print(InitialArray)
-    for i in range(0,w,1):
-        a = InitialArray[i]
-        b = InitialArray[i+1]
-        if a < b:
-            counter += 1
-    if counter < w:
-        counter = 0
-    elif counter == w:
-        finish = 1
+import random
+def bubblesort(arr):
+    x = len(arr)
+    for z in range(x):
+        check = 0
+        for y in range(0, x-1,1):
+            if arr[y] > arr[y+1]:
+                check = 1
+                arr[y], arr[y+1] = arr[y+1], arr[y]
+        if check == 0:
+            break
+arr = []
+for i in range(8):
+        num = random.randint(0, 99)
+        arr.append(num)
+bubblesort(arr)
+print(arr)
